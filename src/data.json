@@ -1,0 +1,117 @@
+[
+  {
+    "category": "Entertainment: Japanese Anime & Manga",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "In the 9th Pokemon movie, who is the Prince of the Sea?",
+    "answer": "Manaphy",
+    "options": [
+      "Ash",
+      "May",
+      "Phantom"
+    ],
+    "image": ""
+  },
+  {
+    "category": "General Knowledge",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "Which of the following buildings is example of a structure primarily built in the Art Deco architectural style?",
+    "answer": "Niagara Mohawk Building",
+    "options": [
+      "Taipei 101",
+      "One Detroit Center",
+      "Westendstrasse 1"
+    ],
+    "image": ""
+  },
+  {
+    "category": "Geography",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "What country has a horizontal bicolor red and white flag?",
+    "answer": "Monaco",
+    "options": [
+      "Bahrain",
+      "Malta",
+      "Liechenstein"
+    ],
+    "image": ""
+  },
+  {
+    "category": "History",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "When did Lithuania declare independence from the Soviet Union?",
+    "answer": "March 11th, 1990",
+    "options": [
+      "December 25th, 1991",
+      "December 5th, 1991",
+      "April 20th, 1989"
+    ],
+    "image": ""
+  },
+  {
+    "category": "Mythology",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Who is the Egyptian god of reproduction and lettuce?",
+    "answer": "Min",
+    "options": [
+      "Menu",
+      "Mut",
+      "Meret"
+    ],
+    "image": ""
+  },
+  {
+    "category": "Entertainment: Music",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "Who was featured in the song &quot;Words&quot; by Feint? ",
+    "answer": "Laura Brehm",
+    "options": [
+      "Anna Yvette ",
+      "Danyka Nadeau",
+      "Veela"
+    ],
+    "image": ""
+  },
+  {
+    "category": "Sports",
+    "type": "boolean",
+    "difficulty": "easy",
+    "question": "In Rugby League, performing a &quot;40-20&quot; is punished by a free kick for the opposing team.",
+    "answer": "False",
+    "options": [
+      "True"
+    ],
+    "image": ""
+  },
+  {
+    "category": "General Knowledge",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Originally another word for poppy, coquelicot is a shade of what?",
+    "answer": "Red",
+    "options": [
+      "Green",
+      "Blue",
+      "Pink"
+    ],
+    "image": ""
+  },
+  {
+    "category": "Geography",
+    "type": "radioCheck",
+    "difficulty": "hard",
+    "question": "Question in the picture",
+    "answer": "Monaco",
+    "options": [
+      "Bahrain",
+      "Malta",
+      "Liechenstein"
+    ],
+    "image": "./images/question1.png"
+  }
+]
