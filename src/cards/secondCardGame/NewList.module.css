@@ -1,0 +1,194 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*max-width: 900px;*/
+    margin: 7rem 2rem;
+}
+
+.box {
+    max-width: 635px;
+    width: auto;
+    margin: 5px;
+
+}
+
+.timeBlock {
+    width: auto;
+    font-size: xxx-large;
+    color: #366f01;
+    text-align: center;
+}
+
+.titleQ {
+    background-color: #FFF;
+    font-size: .75rem;
+    border-radius: .3em;
+    min-width: 80%;
+    min-height: 50px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titleQ img {
+
+}
+
+.answerContainer {
+    flex-direction: column;
+    min-width: 80%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    justify-content: space-around;
+
+}
+
+.answers {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.answer {
+    width: 40%;
+    font-weight: bold;
+    font-size: large;
+    background-color: #202528;
+    border: rgba(0, 0, 0, 0.1) 2px solid;
+    color: #ff1100;
+    margin: 5px;
+    cursor: pointer;
+    height: 5em;
+    border-radius: .3em;
+}
+
+.answer:hover {
+    border: brown 2px solid;
+}
+
+.colorWin {
+    background-color: #366f01;
+    color: #202528;
+    font-weight: bold;
+    font-size: large;
+}
+
+.colorLose {
+    background-color: brown;
+    color: #202528;
+    font-weight: bold;
+    font-size: large;
+}
+
+.blockBtnNext {
+    display: flex;
+    justify-content: center;
+}
+
+.btnNext {
+    font-weight: bold;
+    font-size: large;
+    background-color: #202528;
+    border: none;
+    color: #ff1100;
+    margin: 5px;
+    cursor: pointer;
+    height: 3em;
+    width: 5em;
+    border-radius: .3em;
+}
+
+.btnHome {
+    font-weight: bold;
+    font-size: large;
+    background-color: #202528;
+    border: none;
+    color: #ff1100;
+    margin: 5px;
+    cursor: pointer;
+    height: 3em;
+    width: 5em;
+    border-radius: .3em;
+}
+
+.winBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.winTitle {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 5rem;
+    background-color: #202528;
+    color: #ff1100;
+    align-items: center;
+    padding: 1em;
+}
+
+.winButton {
+    width: 30%;
+    background-color: #202528;
+    color: #ff1100;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 5rem;
+    border: none;
+    font-size: large;
+    border-radius: 15px;
+}
+
+.winButton:hover {
+    background-color: brown;
+    color: #202528;
+}
+
+@media screen and (max-width: 700px) {
+    .answers {
+        flex-direction: column;
+    }
+
+    .answer {
+        width: 100%;
+    }
+
+    .blockBtnNext {
+        flex-direction: column;
+    }
+
+    .btnNext {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .btnHome {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .titleQ {
+        width: 200px;
+    }
+
+    .answerContainer {
+        width: 230px;
+    }
+
+    .titleQ img {
+        width: 220px;
+    }
+
+    .box {
+        width: auto;
+    }
+}

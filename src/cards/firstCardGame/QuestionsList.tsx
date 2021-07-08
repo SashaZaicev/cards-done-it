@@ -1,6 +1,6 @@
 import React from 'react';
 import style from "./QuestionList.module.css"
-import {cardsType} from "../types/TypesContainer";
+import {cardsType} from "../../types/TypesContainer";
 import QuestionCard from "./QuestionCard";
 
 type QuestionsListTypes = {
@@ -9,8 +9,8 @@ type QuestionsListTypes = {
 const QuestionsList: React.FC<QuestionsListTypes> = ({questionsCards}) => {
     return (
         <div className={style.cardListContainer}>
-            {questionsCards.map((card) => {
-                return <QuestionCard card={card} key={`${card.question} + ${Date.now()}`}/>
+            {questionsCards.map((card, index) => {
+                return <QuestionCard card={card} key={`${index} + ${Date.now()}`}/>
             })}
         </div>
     );

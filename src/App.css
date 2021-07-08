@@ -3,3 +3,8 @@ body {
     background: #285b70;
     margin: 0;
 }
+
+app {
+    display: flex;
+    justify-content: center;
+}

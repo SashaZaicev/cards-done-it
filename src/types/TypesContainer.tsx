@@ -8,11 +8,13 @@ export type questionItemType = {
     type: string,
 }
 
+
 export type cardType = {
     category: string
     answer: string
     difficulty: string
     options: Array<string>
+    answers?: Array<string>
     question: string
     type: string
     image: string

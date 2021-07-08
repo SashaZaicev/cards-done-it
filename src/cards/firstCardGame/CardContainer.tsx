@@ -1,13 +1,16 @@
 import React, {useEffect, useRef, useState} from 'react';
-import fileJSON from "../data.json";
 import axios from "axios";
 import style from "./QuestionList.module.css"
-import {categoryType, questionItemType} from "../types/TypesContainer";
+import {cardType, categoryType, questionItemType} from "../../types/TypesContainer";
 import QuestionsList from "./QuestionsList";
 
-const treeData = fileJSON
-const CardContainer = () => {
+type CardContainerTypes = {
+    treeData: Array<cardType>
+    changeGame: (e: number) => void
+}
 
+const CardContainer: React.FC<CardContainerTypes> = (
+    {treeData,changeGame}) => {
     const [questions, setQuestions] = useState(treeData);
     const [categories, setCategories] = useState([])
     const categoryEl = useRef<HTMLSelectElement>(null)
@@ -18,6 +21,14 @@ const CardContainer = () => {
             .then(res => {
                 setCategories(res.data.trivia_categories)
             })
+        const allAnswers = treeData.map((question) => ({
+            ...question,
+            answers: [
+                question.answer,
+                ...question.options
+            ].sort(() => Math.random() - 0.5)
+        }))
+        setQuestions(allAnswers);
     }, [])
 
     function decodeString(str: string) {
@@ -74,6 +85,9 @@ const CardContainer = () => {
                 </div>
                 <div className={style.formGroup}>
                     <button className={style.btn}>Generate</button>
+                </div>
+                <div className={style.formGroup}>
+                    <button className={style.btnHome} onClick={() => changeGame(3)}>HOME</button>
                 </div>
             </form>
             <div className={style.container}>

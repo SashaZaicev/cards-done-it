@@ -1,0 +1,57 @@
+.startContainer {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    flex-direction: column;
+}
+
+.startContainer h1 {
+    text-align: center;
+    color: brown;
+}
+
+.startContainer h1:hover {
+    color: #ff1100;
+}
+
+.choiceContainer {
+    display: flex;
+
+}
+
+.firstGame {
+    width: 300px;
+    height: 190px;
+    border: #202528 5px solid;
+    cursor: pointer;
+}
+
+.firstGameTitle {
+    display: none;
+}
+
+.firstGame:hover {
+    border: #ff1100 5px solid;
+}
+
+.firstGame img:hover {
+    background: #202528;
+}
+
+.secondGame {
+    width: 300px;
+    height: 190px;
+    border: #202528 5px solid;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.secondGame:hover {
+    border: #ff1100 5px solid;
+}
+
+.secondGame img:hover {
+    background: #202528;
+}
