@@ -55,3 +55,58 @@
 .secondGame img:hover {
     background: #202528;
 }
+
+@media screen and (max-width: 1100px) {
+    .choiceContainer {
+        flex-direction: column;
+    }
+
+    .secondGame {
+        margin: 5px 0 0 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .startContainer {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .firstGame {
+        width: 200px;
+        height: 140px;
+        border: #202528 2px solid;
+    }
+
+    .secondGame {
+        width: 200px;
+        height: 140px;
+        border: #202528 2px solid;
+    }
+}
+
+
+@media screen and (max-width: 460px) {
+    .startContainer {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1em;
+    }
+
+    .firstGame {
+        width: 200px;
+        height: 140px;
+        border: #202528 2px solid;
+    }
+
+    .secondGame {
+        width: 200px;
+        height: 140px;
+        border: #202528 2px solid;
+    }
+}

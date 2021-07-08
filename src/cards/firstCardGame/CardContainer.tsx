@@ -10,7 +10,7 @@ type CardContainerTypes = {
 }
 
 const CardContainer: React.FC<CardContainerTypes> = (
-    {treeData,changeGame}) => {
+    {treeData, changeGame}) => {
     const [questions, setQuestions] = useState(treeData);
     const [categories, setCategories] = useState([])
     const categoryEl = useRef<HTMLSelectElement>(null)
@@ -66,7 +66,11 @@ const CardContainer: React.FC<CardContainerTypes> = (
     }
 
     return (
-        <>
+        <div style={{
+            display: "flex",
+            justifyContent: "center"
+        }
+        }>
             <form className={style.header} onSubmit={handleSubmit}>
                 <div className={style.formGroup}>
                     <label htmlFor="category">Category</label>
@@ -93,7 +97,7 @@ const CardContainer: React.FC<CardContainerTypes> = (
             <div className={style.container}>
                 <QuestionsList questionsCards={questions}/>
             </div>
-        </>
+        </div>
     );
 };
 
