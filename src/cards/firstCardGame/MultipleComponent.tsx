@@ -11,6 +11,7 @@ const MultipleComponent: React.FC<QuestionCardTypes> = ({card: {question, answer
     const flip = () => {
         setTurn(!turn)
     }
+    debugger
     const frontEl = useRef() as React.MutableRefObject<HTMLInputElement>
     const backEl = useRef() as React.MutableRefObject<HTMLInputElement>
 
@@ -28,21 +29,33 @@ const MultipleComponent: React.FC<QuestionCardTypes> = ({card: {question, answer
     }, [])
     return (
         <div className={`${style.card} ${turn ? style.turnCard : ''}`}
-             style={{height: height}}
-             onClick={flip}>
-            <div className={style.front} ref={frontEl}>
-                <div className={style.titleQ} dangerouslySetInnerHTML={{__html: question}}/>
+             style={{height}}
+             onClick={flip}
+        >
+            <div className={style.front}
+                 ref={frontEl}>
+                <div
+                    className={style.titleQ}
+                    dangerouslySetInnerHTML={{__html: question}}
+                />
                 {image && <img width="100%" height="89" alt="" src={image}/>}
                 <div className={style.cardOptions}>
-                    {answers?.map((option: string, index: string | number) => {
-                        return <div key={`${index}-${Date.now()}`}
-                                    className={style.cardOption}>{option}</div>
-                    })}
+                    {!answers
+                        ? options.map((option, index) => {
+                            return <div key={`${index}-${Date.now()}`}
+                                        className={style.cardOption}>{option}</div>
+                        })
+                        : answers.map((option, index) => {
+                            return <div key={`${index}-${Date.now()}`}
+                                        className={style.cardOption}>{option}</div>
+                        })}
                 </div>
 
             </div>
             <div className={style.back}
-                 ref={backEl}>{answer}</div>
+                 ref={backEl}>
+                {answer}
+            </div>
         </div>
     );
 };

@@ -7,12 +7,7 @@ type QuestionCardTypes = {
 }
 
 const QuestionCard: React.FC<QuestionCardTypes> = ({card}) => {
-
-    return (
-        <>
-            <MultipleComponent card={card}/>
-        </>
-    );
+    return <MultipleComponent card={card}/>;
 };
 
 export default QuestionCard;

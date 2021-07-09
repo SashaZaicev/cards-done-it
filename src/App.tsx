@@ -18,12 +18,15 @@ function App() {
         e === 3 && setStartFirstGame(false)
     }
 
+
     return (
         <div className="App">
             <header>
             </header>
-            {startFirstGame ? <CardContainer changeGame={changeGame} treeData={treeData}/>
-                : startSecondGame ? <CheckCards changeGame={changeGame} treeData={treeData}/>
+            {startFirstGame
+                ? <CardContainer changeGame={changeGame} treeData={treeData}/>
+                : startSecondGame
+                    ? <CheckCards changeGame={changeGame} treeData={treeData}/>
                     : <StartGame changeGame={changeGame}/>}
 
             {/*//answer on the other side of the card*/}

@@ -66,11 +66,7 @@ const CardContainer: React.FC<CardContainerTypes> = (
     }
 
     return (
-        <div style={{
-            display: "flex",
-            justifyContent: "center"
-        }
-        }>
+        <div className={style.cardBox}>
             <form className={style.header} onSubmit={handleSubmit}>
                 <div className={style.formGroup}>
                     <label htmlFor="category">Category</label>
@@ -97,6 +93,7 @@ const CardContainer: React.FC<CardContainerTypes> = (
             <div className={style.container}>
                 <QuestionsList questionsCards={questions}/>
             </div>
+            <div></div>
         </div>
     );
 };

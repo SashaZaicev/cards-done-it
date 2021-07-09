@@ -12,9 +12,14 @@ type QuestionTypes = {
     startGame: () => void
     handleFinishGame: () => void
     isActive: boolean
+    currentIndex: number
+    lengthArray: number
 }
 
-const Questions: React.FC<QuestionTypes> = ({handleFinishGame,
+const Questions: React.FC<QuestionTypes> = ({
+                                                lengthArray,
+                                                currentIndex,
+                                                handleFinishGame,
                                                 isActive, startGame,
                                                 changeGame,
                                                 handleNextQuestion,
@@ -22,30 +27,35 @@ const Questions: React.FC<QuestionTypes> = ({handleFinishGame,
                                                 handleAnswer,
                                                 questions: {question, answer, answers, image}
                                             }) => {
-
     return (
         <div className={style.box}>
-            <span className={style.timeBlock}><Timer handleFinishGame={handleFinishGame} startGame={startGame} isActive={isActive}/></span>
+            <span className={style.timeBlock}>
+                <div>Question {currentIndex}/{lengthArray}</div>
+                <Timer handleFinishGame={handleFinishGame} startGame={startGame}
+                       isActive={isActive}/>
+            </span>
             <div className={style.titleQ}>
                 <h2 dangerouslySetInnerHTML={{__html: question}}/>
                 {image && <img width="220px" height="89" alt="" src={image}/>}
             </div>
             <div className={style.answerContainer}>
                 <div className={style.answers}>{answers?.map((ans, index) => {
-                    const trueColor = showAnswers ? ans === answer ? `${style.colorWin}` : `${style.colorLose}` : ''
+                    const trueColor = showAnswers
+                        ? ans === answer
+                            ? `${style.colorWin}`
+                            : `${style.colorLose}` : ''
                     return (
-                        <button key={`${index} + ${Date.now()}`} onClick={() => handleAnswer(ans)}
+                        <button key={`${index} + ${Date.now()}`}
+                                onClick={() => handleAnswer(ans)}
                                 className={`${style.answer} ${trueColor}`}
                                 dangerouslySetInnerHTML={{__html: ans}}/>
                     )
                 })}</div>
                 <div className={style.blockBtnNext}>
-
                     {showAnswers &&
                     <button className={style.btnNext} onClick={handleNextQuestion}>Next</button>}
                     <button className={style.btnHome} onClick={() => changeGame(3)}>HOME</button>
                 </div>
-
             </div>
         </div>
     );

@@ -1,9 +1,41 @@
+#blink {
+    -webkit-animation: blink 2s linear infinite;
+    animation: blink 2s linear infinite;
+    font-weight: bold;
+    color: #ff1100;
+}
+
+@-webkit-keyframes blink {
+    0% {
+        color: #ff1100;
+    }
+    50% {
+        color: brown;
+    }
+    100% {
+        color: #ff1100;
+    }
+}
+
+@keyframes blink {
+    0% {
+        color: #ff1100;
+    }
+    50% {
+        color: brown;
+    }
+    100% {
+        color: #ff1100;
+    }
+}
+
+
 .startContainer {
     width: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 500px;
+    min-height: 500px;
     flex-direction: column;
 }
 
@@ -12,9 +44,9 @@
     color: brown;
 }
 
-.startContainer h1:hover {
-    color: #ff1100;
-}
+/*.startContainer h1:hover {*/
+/*    color: #ff1100;*/
+/*}*/
 
 .choiceContainer {
     display: flex;
@@ -22,10 +54,10 @@
 }
 
 .firstGame {
-    width: 300px;
-    height: 190px;
-    border: #202528 5px solid;
+    width: 210px;
+    height: 312px;
     cursor: pointer;
+    border: rgba(255, 17, 0, 0) 5px solid;
 }
 
 .firstGameTitle {
@@ -36,16 +68,20 @@
     border: #ff1100 5px solid;
 }
 
+.firstGame img {
+    width: 100%;
+}
+
 .firstGame img:hover {
     background: #202528;
 }
 
 .secondGame {
-    width: 300px;
-    height: 190px;
-    border: #202528 5px solid;
+    width: 210px;
+    height: 312px;
     margin-left: 5px;
     cursor: pointer;
+    border: rgba(255, 17, 0, 0) 5px solid;
 }
 
 .secondGame:hover {
@@ -75,17 +111,6 @@
         font-size: 1.5em;
     }
 
-    .firstGame {
-        width: 200px;
-        height: 140px;
-        border: #202528 2px solid;
-    }
-
-    .secondGame {
-        width: 200px;
-        height: 140px;
-        border: #202528 2px solid;
-    }
 }
 
 
@@ -96,17 +121,5 @@
 
     h1 {
         font-size: 1em;
-    }
-
-    .firstGame {
-        width: 200px;
-        height: 140px;
-        border: #202528 2px solid;
-    }
-
-    .secondGame {
-        width: 200px;
-        height: 140px;
-        border: #202528 2px solid;
     }
 }

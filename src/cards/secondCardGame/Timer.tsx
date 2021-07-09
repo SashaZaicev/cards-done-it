@@ -7,7 +7,7 @@ type TimerTypes = {
 }
 
 const Timer: React.FC<TimerTypes> = ({handleFinishGame,startGame, isActive}) => {
-    let [second, setSecond] = useState(10);
+    let [second, setSecond] = useState(15);
     useEffect(() => {
         let intervalId = 0;
 
